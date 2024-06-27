@@ -35,7 +35,11 @@ export default function Input({ type, ...props }: InputProps) {
     setIsPasswordVisible((prevValue) => !prevValue);
   }
 
-  async function validateInput(value: string) {
+  async function validateInput(value: string | undefined) {
+    if (value === undefined) {
+      setError("Invalid input");
+      return;
+    }
     if (type === "email") {
       const { isValid, errorMsg } = await validateEmail(value);
       setError(errorMsg);
