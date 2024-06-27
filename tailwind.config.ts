@@ -8,10 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        tenor: ["Tenor Sans", "sans-serif"],
+      },
+      colors: {
+        "custom-input": "#E9ECEF",
+        "custom-label-input": "#20130B",
+        "custom-placeholder": "#8B8B8B",
+        "custom-input-icon": "#CCCCCC",
+        "custom-button-login": "#BC8363",
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "custom-imagem": "url('/background.svg')",
       },
     },
   },
